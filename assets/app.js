@@ -2,7 +2,7 @@ import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk";
 import { Attribution } from "https://esm.sh/ox/erc8021";
 
 const DOMAIN = "nurrabby.com";
-const HOME_URL = "https://nurrabby.com/";
+const HOME_URL = "https://my-little-rugpull.vercel.app/";
 const USDC_CONTRACT = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
 const USDC_DECIMALS = 6;
 
