@@ -1,0 +1,29 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "My Little Rugpull",
+    "description": "A glitchy 90s virtual pet for the shame coins in your wallet. Feed them charts. Watch one randomly go to zero. Rekt.",
+    "iconUrl": "https://nurrabby.com/assets/icon-1024.png",
+    "homeUrl": "https://nurrabby.com/",
+    "canonicalDomain": "nurrabby.com",
+    "requiredChains": [
+      "eip155:8453"
+    ],
+    "tags": [
+      "game",
+      "social",
+      "base",
+      "farcaster",
+      "memecoin"
+    ],
+    "requiredCapabilities": [
+      "actions.ready",
+      "wallet.getEthereumProvider"
+    ]
+  }
+}
