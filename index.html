@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#141414" />
+  <title>My Little Rugpull</title>
+
+  <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://nurrabby.com/assets/embed-3x2.png","button":{"title":"Launch My Little Rugpull","action":{"type":"launch_frame","name":"My Little Rugpull","url":"https://nurrabby.com/","splashImageUrl":"https://nurrabby.com/assets/splash-200.png","splashBackgroundColor":"#141414"}}}' />
+  <meta name="fc:frame" content='{"version":"1","imageUrl":"https://nurrabby.com/assets/embed-3x2.png","button":{"title":"Launch My Little Rugpull","action":{"type":"launch_frame","name":"My Little Rugpull","url":"https://nurrabby.com/","splashImageUrl":"https://nurrabby.com/assets/splash-200.png","splashBackgroundColor":"#141414"}}}' />
+
+  <link rel="icon" href="https://nurrabby.com/assets/icon-1024.png" />
+  <link rel="preload" href="https://nurrabby.com/assets/embed-3x2.png" as="image" />
+  <link rel="stylesheet" href="https://nurrabby.com/assets/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="logo">MY LITTLE <span class="glitch">RUGPULL</span></div>
+      <div class="right">
+        <button id="btn-connect" class="btn btn-ghost">Connect</button>
+        <button id="btn-tip" class="btn btn-primary">Tip</button>
+      </div>
+    </header>
+
+    <main class="screen">
+      <section class="panel">
+        <div class="panel-title">CAGE</div>
+        <div class="cage">
+          <div id="flash" class="flash">HONEYPOT DETECTED</div>
+          <canvas id="pet-canvas" width="320" height="240" aria-label="pet screen"></canvas>
+          <div class="status">
+            <div><span class="label">Owner</span> <span id="owner" class="mono">Not connected</span></div>
+            <div><span class="label">Current Pet</span> <span id="pet-name" class="mono">—</span></div>
+            <div><span class="label">Health</span> <span id="pet-health" class="mono">—</span></div>
+            <div><span class="label">Liquidity</span> <span id="pet-liq" class="mono">—</span></div>
+            <div><span class="label">Price</span> <span id="pet-price" class="mono">—</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">SHAME SCAN</div>
+        <div class="row">
+          <button id="btn-scan" class="btn btn-secondary">Scan Wallet</button>
+          <button id="btn-next" class="btn btn-ghost">Next Pet</button>
+        </div>
+        <p class="hint">
+          This is a production Mini App shell that runs fully inside Farcaster. If your wallet provider doesn’t expose a token list,
+          the scan falls back to deterministic “mystery coins” derived from your address (still fun; still rekt).
+        </p>
+        <div id="token-list" class="token-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">CARE</div>
+        <div class="row">
+          <button id="btn-feed" class="btn btn-secondary">Feed (Check Chart)</button>
+          <button id="btn-pet" class="btn btn-secondary">Pet</button>
+          <button id="btn-clean" class="btn btn-secondary">Clean</button>
+        </div>
+        <div class="log" id="log" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="bottombar mono">
+      <span id="miniapp-state">Booting…</span>
+      <span class="sep">|</span>
+      <span>Base Mainnet</span>
+      <span class="sep">|</span>
+      <span id="chain-state">Unknown chain</span>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="tip-sheet" class="sheet hidden" role="dialog" aria-modal="true" aria-label="Send a tip">
+    <div class="sheet-backdrop" id="tip-backdrop"></div>
+    <div class="sheet-card">
+      <div class="sheet-handle"></div>
+      <div class="sheet-title">Tip the Builder</div>
+      <div class="sheet-subtitle mono">USDC on Base • custom bottom-sheet • ERC-5792</div>
+
+      <div class="preset-row">
+        <button class="chip" data-usd="1">$1</button>
+        <button class="chip" data-usd="5">$5</button>
+        <button class="chip" data-usd="10">$10</button>
+        <button class="chip" data-usd="25">$25</button>
+      </div>
+
+      <label class="field">
+        <span class="mono">Custom amount (USD)</span>
+        <input id="tip-custom" inputmode="decimal" placeholder="0.00" />
+      </label>
+
+      <div class="sheet-actions">
+        <button id="tip-cancel" class="btn btn-ghost">Cancel</button>
+        <button id="tip-cta" class="btn btn-primary">Send USDC</button>
+      </div>
+
+      <div class="sheet-foot mono" id="tip-footnote"></div>
+    </div>
+  </div>
+
+  <script type="module" src="https://nurrabby.com/assets/app.js"></script>
+</body>
+</html>
