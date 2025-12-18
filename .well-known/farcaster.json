@@ -8,8 +8,8 @@
     "version": "1",
     "name": "My Little Rugpull",
     "description": "A glitchy 90s virtual pet for the shame coins in your wallet. Feed them charts. Watch one randomly go to zero. Rekt.",
-    "iconUrl": "https://nurrabby.com/assets/icon-1024.png",
-    "homeUrl": "https://nurrabby.com/",
+    "iconUrl": "https://my-little-rugpull.vercel.app/assets/icon-1024.png",
+    "homeUrl": "https://my-little-rugpull.vercel.app/",
     "canonicalDomain": "nurrabby.com",
     "requiredChains": [
       "eip155:8453"
